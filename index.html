@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteadyClick - Earn Money Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>SteadyClick</h1>
+        </div>
+        <div class="header-icons">
+            <div class="notification-icon">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">5</span>
+            </div>
+            <div class="live-icon">
+                <i class="fas fa-satellite-dish"></i>
+                <span>Live</span>
+            </div>
+            <div class="messenger-icon">
+                <i class="fas fa-comment-dots"></i>
+                <span class="message-badge">3</span>
+            </div>
+            <div class="help-icon">
+                <i class="fas fa-question-circle"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div id="content-container">
+            <!-- Content will be loaded dynamically here -->
+            <div id="home-content" class="active-content">
+                <!-- Home Content -->
+                <div class="order-list">
+                    <h2>Available Orders</h2>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="subscribe">Subscribe/Follow</button>
+                        <button class="filter-btn" data-filter="engagement">Like/Comment/Share</button>
+                        <button class="filter-btn" data-filter="video">Video</button>
+                    </div>
+                    
+                    <div class="orders-container">
+                        <!-- Order items will be populated here -->
+                        <div class="order-item" data-category="subscribe">
+                            <div class="order-header">
+                                <img src="https://via.placeholder.com/40" alt="Profile" class="user-img">
+                                <div class="order-info">
+                                    <h3>YouTube Subscribe Task</h3>
+                                    <p class="order-date">Posted: May 10, 2023</p>
+                                </div>
+                                <div class="order-rate">$0.05 per task</div>
+                            </div>
+                            <div class="order-body">
+                                <p>Subscribe to my YouTube channel and stay subscribed for at least 1 week.</p>
+                                <div class="order-details">
+                                    <span><i class="fas fa-users"></i> Workers needed: 100</span>
+                                    <span><i class="fas fa-check-circle"></i> Completed: 35</span>
+                                    <span><i class="fas fa-clock"></i> Remaining: 65</span>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <button class="btn btn-primary">Accept Task</button>
+                                <button class="btn btn-secondary">Details</button>
+                            </div>
+                        </div>
+                        
+                        <div class="order-item" data-category="engagement">
+                            <div class="order-header">
+                                <img src="https://via.placeholder.com/40" alt="Profile" class="user-img">
+                                <div class="order-info">
+                                    <h3>Instagram Like & Comment</h3>
+                                    <p class="order-date">Posted: May 11, 2023</p>
+                                </div>
+                                <div class="order-rate">$0.05 per task</div>
+                            </div>
+                            <div class="order-body">
+                                <p>Like and comment on my latest Instagram post. Comment must be at least 5 words.</p>
+                                <div class="order-details">
+                                    <span><i class="fas fa-users"></i> Workers needed: 50</span>
+                                    <span><i class="fas fa-check-circle"></i> Completed: 22</span>
+                                    <span><i class="fas fa-clock"></i> Remaining: 28</span>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <button class="btn btn-primary">Accept Task</button>
+                                <button class="btn btn-secondary">Details</button>
+                            </div>
+                        </div>
+                        
+                        <div class="order-item" data-category="video">
+                            <div class="order-header">
+                                <img src="https://via.placeholder.com/40" alt="Profile" class="user-img">
+                                <div class="order-info">
+                                    <h3>Watch Full YouTube Video</h3>
+                                    <p class="order-date">Posted: May 12, 2023</p>
+                                </div>
+                                <div class="order-rate">$0.15 per task</div>
+                            </div>
+                            <div class="order-body">
+                                <p>Watch my 5-minute YouTube video completely. Must watch at least 90% of the video.</p>
+                                <div class="order-details">
+                                    <span><i class="fas fa-users"></i> Workers needed: 100</span>
+                                    <span><i class="fas fa-check-circle"></i> Completed: 45</span>
+                                    <span><i class="fas fa-clock"></i> Remaining: 55</span>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <button class="btn btn-primary">Accept Task</button>
+                                <button class="btn btn-secondary">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video Content (Initially Hidden) -->
+            <div id="video-content" class="hidden-content">
+                <h2>Video Tasks</h2>
+                <div class="orders-container">
+                    <!-- Video order items will be populated here -->
+                </div>
+            </div>
+            
+            <!-- Create Order Content (Initially Hidden) -->
+            <div id="create-order-content" class="hidden-content">
+                <h2>Create New Order</h2>
+                <div class="order-type-selection">
+                    <div class="order-type-option" data-type="digital-marketing">
+                        <i class="fas fa-bullhorn"></i>
+                        <h3>Digital Marketing</h3>
+                        <p>Subscribe, Follow, Like, Comment, Share, and Video tasks</p>
+                    </div>
+                    <div class="order-type-option" data-type="apps">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Apps</h3>
+                        <p>App Download, Review, and In-App Activities</p>
+                    </div>
+                    <div class="order-type-option" data-type="web-dev">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Website Creation, Bug Fixing, Design, Custom Features</p>
+                    </div>
+                </div>
+                
+                <!-- Form containers (initially hidden) -->
+                <div id="digital-marketing-form" class="order-form hidden">
+                    <!-- Digital Marketing Form -->
+                </div>
+                
+                <div id="apps-form" class="order-form hidden">
+                    <!-- Apps Form -->
+                </div>
+                
+                <div id="web-dev-form" class="order-form hidden">
+                    <!-- Web Dev Form -->
+                </div>
+            </div>
+            
+            <!-- Web Dev Content (Initially Hidden) -->
+            <div id="web-dev-content" class="hidden-content">
+                <h2>Web Development Orders</h2>
+                <div class="orders-container">
+                    <!-- Web dev order items will be populated here -->
+                </div>
+            </div>
+            
+            <!-- Profile Content (Initially Hidden) -->
+            <div id="profile-content" class="hidden-content">
+                <div class="profile-header">
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/150" alt="Profile Picture">
+                        <button class="edit-profile-pic"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="user-name">User Name</h2>
+                        <p class="user-id">ID: USR123456</p>
+                        <p class="account-type">Account Type: Worker</p>
+                        <p class="account-status">Status: Verified <i class="fas fa-check-circle verified"></i></p>
+                    </div>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <h3>Completed Tasks</h3>
+                        <p>142</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Total Earned</h3>
+                        <p>$85.50</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Pending Balance</h3>
+                        <p>$12.25</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>Available Balance</h3>
+                        <p>$73.25</p>
+                    </div>
+                </div>
+                
+                <div class="profile-options">
+                    <button class="profile-option-btn active" data-option="settings">
+                        <i class="fas fa-cog"></i> Settings
+                    </button>
+                    <button class="profile-option-btn" data-option="complaints">
+                        <i class="fas fa-exclamation-circle"></i> Complaints & Payments
+                    </button>
+                    <button class="profile-option-btn" data-option="orders">
+                        <i class="fas fa-clipboard-list"></i> Order History
+                    </button>
+                    <button class="profile-option-btn" data-option="help">
+                        <i class="fas fa-question-circle"></i> Help
+                    </button>
+                </div>
+                
+                <div id="profile-settings" class="profile-section-content">
+                    <!-- Settings content -->
+                    <h3>Profile Settings</h3>
+                    <form id="profile-settings-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" value="User Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email (Gmail)</label>
+                            <input type="email" id="email" value="user@gmail.com" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp Number</label>
+                            <input type="text" id="whatsapp" value="+880 1700000000">
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country">
+                                <option value="bangladesh">Bangladesh</option>
+                                <option value="india">India</option>
+                                <option value="pakistan">Pakistan</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="profession">Profession</label>
+                            <select id="profession">
+                                <option value="student">Student</option>
+                                <option value="freelancer">Freelancer</option>
+                                <option value="developer">Developer</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Bio (150 characters max)</label>
+                            <textarea id="bio" maxlength="150"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Theme</label>
+                            <div class="theme-switch">
+                                <input type="checkbox" id="theme-toggle">
+                                <label for="theme-toggle">Toggle Dark/Light Mode</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+                
+                <div id="profile-complaints" class="profile-section-content hidden">
+                    <!-- Complaints and payments content -->
+                    <div class="tab-options">
+                        <button class="tab-btn active" data-tab="complaints">Complaints</button>
+                        <button class="tab-btn" data-tab="payments">Payment Requests</button>
+                    </div>
+                    
+                    <div id="complaints-tab" class="tab-content">
+                        <h3>Submit a Complaint</h3>
+                        <form id="complaint-form">
+                            <div class="form-group">
+                                <label for="complaint-subject">Subject</label>
+                                <select id="complaint-subject">
+                                    <option value="order-issue">Order Issue</option>
+                                    <option value="payment-issue">Payment Issue</option>
+                                    <option value="user-behavior">User Behavior</option>
+                                    <option value="technical-issue">Technical Issue</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="complaint-email">Your Email</label>
+                                <input type="email" id="complaint-email" value="user@gmail.com" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="complaint-details">Problem Details</label>
+                                <textarea id="complaint-details" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="complaint-evidence">Evidence (Screenshot/Video)</label>
+                                <input type="file" id="complaint-evidence">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Complaint</button>
+                        </form>
+                        <p class="note">You will receive a reply within 24 hours.</p>
+                    </div>
+                    
+                    <div id="payments-tab" class="tab-content hidden">
+                        <h3>Request Payment</h3>
+                        <div class="balance-info">
+                            <p>Current Approved Balance: <span class="amount">$73.25</span></p>
+                            <p class="note">Minimum withdrawal: $2 (৳200)</p>
+                            <p class="note">You can withdraw once per week</p>
+                        </div>
+                        <form id="payment-request-form">
+                            <div class="form-group">
+                                <label for="payment-method">Payment Method</label>
+                                <select id="payment-method" required>
+                                    <option value="">Select Payment Method</option>
+                                    <option value="bkash">Bkash</option>
+                                    <option value="nagad">Nagad</option>
+                                    <option value="rocket">Rocket</option>
+                                    <option value="payoneer">Payoneer</option>
+                                    <option value="wise">Wise</option>
+                                    <option value="sslcommerz">SSLCommerz</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="account-number">Account Number/Email</label>
+                                <input type="text" id="account-number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="amount">Amount</label>
+                                <select id="amount" required>
+                                    <option value="200">৳200 ($2)</option>
+                                    <option value="500">৳500 ($5)</option>
+                                    <option value="1000">৳1000 ($10)</option>
+                                    <option value="2000">৳2000 ($20)</option>
+                                </select>
+                            </div>
+                            <p class="warning-note">Warning: Incorrect information will result in irreversible loss of funds.</p>
+                            <button type="submit" class="btn btn-primary">Submit Request</button>
+                        </form>
+                        
+                        <div class="previous-requests">
+                            <h4>Previous Requests</h4>
+                            <table class="request-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Method</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2023-05-01</td>
+                                        <td>$10.00</td>
+                                        <td>Bkash</td>
+                                        <td><span class="status-completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+   
